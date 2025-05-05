@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <title>Formulario de Contacto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.postimg.cc/9fMYwVyx/imag-2-fondo.png');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 10px;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: 280px;
+            max-height: 80vh;
+            overflow: hidden;
+        }
+        label {
+            display: block;
+            margin-bottom: 4px;
+            color: #4CAF50;
+            font-size: 12px;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 4px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 6px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 12px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DKc00000A4E1K" method="POST">
+            <input type="hidden" name="oid" value="00DKc00000A4E1K">
+            <input type="hidden" name="retURL" value="https://printia.com.co/">
+
+            <label for="first_name">Nombre</label>
+            <input id="first_name" maxlength="40" name="first_name" type="text" required>
+
+            <label for="last_name">Apellidos</label>
+            <input id="last_name" maxlength="80" name="last_name" type="text" required>
+
+            <label for="mobile">Móvil</label>
+            <input id="mobile" maxlength="40" name="mobile" type="text" required>
+
+            <label for="email">Correo electrónico</label>
+            <input id="email" maxlength="80" name="email" type="text" required>
+
+            <label for="company">Compañía</label>
+            <input id="company" maxlength="40" name="company" type="text">
+
+            <label for="city">Ciudad</label>
+            <input id="city" maxlength="40" name="city" type="text">
+
+            <label for="description">Descripción</label>
+            <textarea name="description" rows="2"></textarea>
+
+            <input type="submit" name="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>
